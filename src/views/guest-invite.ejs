@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Invitation</title>
+</head>
+
+<body>
+    <h1>You're Invited!</h1>
+    <p>Hello <%= guestName %>,</p>
+    <p>You are cordially invited to our upcoming event: <strong>
+            <%= eventName %>
+        </strong></p>
+    <p>
+        <% if (eventEndDate) { %>
+            <strong>Event Dates:</strong>
+            <%= eventStartDate %> to <%= eventEndDate %><br>
+                    <% } else { %>
+                        <strong>Event Date:</strong>
+                        <%= eventStartDate %><br>
+                            <% } %>
+                                <strong>Time:</strong>
+                                <%= eventTime %><br>
+                                    <strong>Location:</strong>
+                                    <%= eventLocation %>
+    </p>
+    <p>We would be delighted to have you join us for this special occasion.</p>
+    <p>Please click the following link to accept the invitation:</p>
+    <a href="<%= acceptLink %>">Accept Invitation</a>
+    <p>We look forward to seeing you there!</p>
+    <p>Best regards,<br>Technology Enabling Center Team</p>
+</body>
+
+</html>
